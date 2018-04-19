@@ -1,0 +1,10 @@
+function [mu sigma2] = estimateGaussian(X)
+
+[m, n] = size(X);
+mu = zeros(n, 1);
+sigma2 = zeros(n, 1);
+
+mu = sum(X, 1) / m;
+sigma2 = var(X, 1, 1);
+
+end;
